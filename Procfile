@@ -1,1 +1,1 @@
-web: gunicorn BlogEntregaFinal.wsgi --log-file-
+web: gunicorn BlogEntregaFinal.wsgi --log-file -
