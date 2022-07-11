@@ -10,6 +10,7 @@ class Post(models.Model):
     author=models.ForeignKey(User,on_delete=models.CASCADE)
     body = RichTextField(blank=True, null=True)
     pub_date=models.DateField(auto_now_add=True)
+    snippet=models.CharField(max_length=255)
 
     def __str__(self):
         return self.title + '--' + str(self.author)
