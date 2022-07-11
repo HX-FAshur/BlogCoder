@@ -4,29 +4,57 @@
 {% endblock %}
 
 {% block content %}
-<h1> {{post.title}} </h1><br/><br/>
-	<small>Published {{post.pub_date}}</small><br>
-	<small>by: {{post.author}}</small><br/>
-	<hr><br/>
-	<div class="container">
-		{%if post.header_image%}
-			<img src="{{post.header_image.url}}">
-		{%endif%}
-	<br><br>	
-	{{post.body | safe}}
-	<br/><br/>
- </div>
 <div class="row">
-	<div class="col-lg-2">
-		<a href="{% url 'home' %}" class="btn btn-dark">Back</a>
+	<div class="col-lg-3"></div>
+	<div class="col-lg-6 text-center">
+		<h1> {{post.title}} </h1><br/><br/>
+		<small>Published {{post.pub_date}}</small><br>
+		<small>by: {{post.author}}</small><br/>
+		<hr><br/>
+		<div class="container">
+			{%if post.header_image%}
+				<img src="{{post.header_image.url}}">
+			{%endif%}
+		<br><br>	
+		{{post.body | safe}}
+		<br/><br/>
+		</div>
 	</div>
+</div>
+<div class="row text-center">
+	<div class="col-lg-3">
+	</div>
+	<div class="col-lg-2"><a href="{% url 'home' %}" class="btn btn-dark">Back</a></div>
 	{% if user.is_authenticated %}
+
 	<div class="col-lg-2">
-	<a href="{% url 'update' post.pk %}" class="btn btn-warning">Edit</a>
+		<a href="{% url 'update' post.pk %}" class="btn btn-warning">Edit</a>
 	</div>
-	<div class="col-lg-2">
-		<a href="{% url 'delete' post.pk %}" class="btn btn-danger">Delete</a>
+
+	<div class="col-lg-2"><a href="{% url 'delete' post.pk %}" class="btn btn-danger">Delete</a>
 	</div>
 	{% endif %}
+</div><br><br>
+<div class="row">
+	<div class="col-lg-3"></div>
+	<div class="col-sm-6">
+		<div class="card mb-3">
+			<div class="row no-gutters">
+			  <div class="col-sm-3">
+				<img src="{{post.author.profile.profile_pic.url}}" class="card-img rounded-circle">
+			  </div>
+			  <div class="col-sm-auto">
+				<div class="card-body">
+				  <h5 class="card-title">{{post.author.profile.user}}</h5>
+				  <p class="card-text"><small class="text-muted">{{post.author.profile.bio}}</small></p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	</div>
+
+	
 </div>
+
+
 {% endblock %}

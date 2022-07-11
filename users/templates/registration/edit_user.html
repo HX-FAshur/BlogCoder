@@ -3,8 +3,14 @@
 {% block title %} Edit User Profile {% endblock %}
 
 <h1>Edit User Profile</h1>
-
+<div class="row">
+    <div class="col-lg-3"></div>
+</div>
+<div class="col-lg-6">
 {% block content%}
+<br><br>
+{{user.profile.bio}}
+
 <div class="form-group">
     <form method="POST">
         {% csrf_token %}
@@ -13,3 +19,4 @@
     </form>
 </div>
 {% endblock %}
+</div>

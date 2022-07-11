@@ -28,7 +28,7 @@
                         <a class="nav-link link-dark" aria-current="page" href="{%url 'add_post'%}">Agregar post</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link link-dark" href="{% url 'update-profile' %}">Edit Profile</a>
+                        <a class="nav-link link-dark" href="{% url 'update-profile' %}">Editar Perfil</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link link-dark" href="{% url 'logout' %}">Logout</a>
@@ -44,32 +44,26 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav><br><br>
+
 <div class="container">
     {% block content %}
 
-    <div class="row">
-        <div class="col-lg-5">
+    <div class="row text-center">
+        <div class="col-lg-3">
         <!-- <h1>LANDING</h1> -->
         </div>
         <div class="col-lg-6">
-            <h1>LANDING</h1></br>
+            <h1>Bienvenido a BlogCoder</h1></br>
         </div>
     </div>
     
     <!--<div class="container">-->
     </br>
-    <div class="row justify-content-center">
-        <div class="col-lg-4">
-            {% for post in object_list %}
-        </br>
-<!--             <ul>
-                <a href="{% url 'article-detail' post.pk %}"><li class="card">
-                    {{post.title}} - <small>{{post.author}}</small><br/><br/>
-                    {{post.body}}</br>
-                </li></a>
-            </ul> -->
-
+    <div class="row text-center">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-6 text-center">
+            {% for post in object_list %}</br>
             <div class="card" style="width: 25rem;">
                 <!-- <img src="..." class="card-img-top" alt="..."> -->
                 <div class="card-body">
@@ -80,11 +74,6 @@
               </div>
             {% endfor %}
         </div>
-        <div class="col-lg-4">
-
-        </div>
-
-
     </div>
     <!--</div>-->
 
