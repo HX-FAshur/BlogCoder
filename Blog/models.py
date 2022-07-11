@@ -11,8 +11,13 @@ class Post(models.Model):
     body = RichTextField(blank=True, null=True)
     pub_date=models.DateField(auto_now_add=True)
     snippet=models.CharField(max_length=255)
+    header_image=models.ImageField(null=True,blank=True,upload_to="images/")
 
     def __str__(self):
         return self.title + '--' + str(self.author)
     def get_absolute_url(self):
         return reverse('article-detail',args=(str(self.id)))
+
+class Profile(models.Model):
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    bio = models.TextField()
