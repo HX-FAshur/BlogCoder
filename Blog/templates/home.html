@@ -69,7 +69,7 @@
                 <div class="card-body">
                   <h5 class="card-title"><strong>{{post.title}}</strong></h5>
                   <p class="card-text">{{post.snippet}}</p>
-                  <a href="{% url 'article-detail' post.pk %}" class="btn btn-white stretched-link"><small>by: {{post.author}}</small></a>
+                  <a href="{% url 'article-detail' post.pk %}" class="btn btn-white stretched-link"><small>by: {{post.author.first_name}}</small></a>
                 </div>
               </div>
             {% endfor %}
