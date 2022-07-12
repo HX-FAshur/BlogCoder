@@ -12,15 +12,17 @@ La pagina de registro pide datos basicos para crear un usuario, brindando recome
 <ins><b>Login</b></ins>  
 Cuando se realiza el login, se redirige a la pagina de inicio cuyo navbar ahora muestra opciones de Creacion de posts, Gestion de usuario y logout.  
   
-![imagen](https://user-images.githubusercontent.com/49619096/178543964-c097b3b1-6ae0-41d8-b44c-a707dd6d26f4.png)
-
-> <ins><b>Gestion de Usuario</b></ins>  
-> El menu de Usuario mostrará por defecto la opcion de editar datos de usuario y de crear un Perfil en el caso de que el usuario no lo tenga ya. Si el usuario posee un perfil, entonces el menu mostrará las opciones de Editar Perfil y Ver Perfil.  
+![imagen](https://user-images.githubusercontent.com/49619096/178543964-c097b3b1-6ae0-41d8-b44c-a707dd6d26f4.png)  
+  
+  <ins><b>Gestion de Usuario</b></ins>  
+  El menu de Usuario mostrará por defecto la opcion de editar datos de usuario y de crear un Perfil en el caso de que el usuario no lo tenga ya. Si el usuario posee un perfil, entonces el menu mostrará las opciones de Editar Perfil y Ver Perfil.  
   
 ![imagen](https://user-images.githubusercontent.com/49619096/178545825-2681563d-6fc3-45fd-8ce4-258e30d6213c.png)  
-
-<ins><b>Edición de posts</b></ins>  
-Para la edicion de posts se realiza una verificacion para asegurar que cada usuario solo pueda editar sus propios posts. En caso de que un usuario quiera editar un post ajeno, se le indicará que solicite permiso al autor para ello.  
+  
+  <hr>  
+  
+<ins><b>Seguridad</b></ins>  
+Para la edicion y eliminacion de posts se realiza una verificacion para asegurar que cada usuario solo pueda modificar sus propios posts. En caso de que un usuario quiera editar o borrar un post ajeno utilizando como atajo la ruta (por ejemplo: /article/edit/<article_id>/delete), se le indicará que está accediendo a un Area Restringida y que solicite permiso al autor para la accion que intenta realizar.  
 
 <hr>  
 
