@@ -1,0 +1,15 @@
+{%extends 'home.html'%}
+{%block title %}Actualizar Pagina de Usuario{%endblock%}
+<h1>Crear post nuevo</h1>
+
+{% block content%}
+{%if user.is_authenticated%}
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="btn btn-primary">Actualizar</button>
+</form>
+{%else%}
+<h1>Restricted area. Please login</h1>
+{%endif%}
+{% endblock %}

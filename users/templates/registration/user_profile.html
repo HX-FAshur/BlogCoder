@@ -2,10 +2,9 @@
 {%load static%}
 
 {%block content%}
-<h1>Perfil de {{profile.user}}</h1>
-{{page_user}}
+<h1>Perfil de {{profile.user.first_name}} {{profile.user.last_name}}</h1><br><br><br>
 
-<div class="card mb-3">
+<div class="card mb-3 border-0">
     <div class="row no-gutters">
       <div class="col-sm-3">
         {% if page_user.profile_pic %}

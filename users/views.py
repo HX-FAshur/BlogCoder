@@ -37,6 +37,12 @@ class CreateProfilePageView(CreateView):
         form.instance.user = self.request.user
         return super().form_valid(form)
 
+class EditProfilePageView(generic.UpdateView):
+    model = Profile
+    template_name = 'registration/edit_profilepage.html' 
+    fields = ['bio','profile_pic','twitter_url','fb_url','linkedin_url','ig_url','pin_url']
+    success_url = reverse_lazy('home')
+
 class ProfilePageView(DetailView):
     model = Profile
     template_name = 'registration/user_profile.html'
