@@ -27,13 +27,16 @@
 	</div>
 	<div class="col-lg-2"><a href="{% url 'home' %}" class="btn btn-dark">Back</a></div>
 	{% if user.is_authenticated %}
-
+	
+	{%if post.author.id == user.id %}
 	<div class="col-lg-2">
 		<a href="{% url 'update' post.pk %}" class="btn btn-warning">Edit</a>
 	</div>
 
+	
 	<div class="col-lg-2"><a href="{% url 'delete' post.pk %}" class="btn btn-danger">Delete</a>
 	</div>
+	{%endif%}
 	{% endif %}
 </div><br><br>
 <div class="row">
