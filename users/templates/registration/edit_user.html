@@ -1,8 +1,8 @@
 {%extends 'home.html'%}
 
-{% block title %} Edit User Profile {% endblock %}
+{% block title %} Editar datos de Usuario {% endblock %}
 
-<h1>Edit User Profile</h1>
+<h1>Editar datos de Usuario</h1>
 <div class="row">
     <div class="col-lg-3"></div>
 </div>
@@ -15,7 +15,7 @@
     <form method="POST">
         {% csrf_token %}
         {{form.as_p}}
-        <button class="btn btn-primary">Update</button>
+        <button class="btn btn-primary">Actualizar</button>
     </form>
 </div>
 {% endblock %}

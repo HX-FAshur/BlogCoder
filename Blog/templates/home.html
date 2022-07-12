@@ -38,7 +38,7 @@
                           <li><a class="dropdown-item" href="{%url 'update-profile'%}">Editar datos</a></li>
                           {%if user.profile.id%}
                           <li><a class="dropdown-item" href="{%url 'edit-profile-page' user.profile.id %}">Editar Perfil</a></li>
-                          <li><a class="dropdown-item" href="{%url 'profile-page' post.author.profile.id %}">Ver Perfil</a></li>
+                          <li><a class="dropdown-item" href="{%url 'profile-page' user.profile.id %}">Ver Perfil</a></li>
                           {%else%}
                           <li><a class="dropdown-item" href="{%url 'create_profile'%}">Crear Perfil</a></li>
                           {%endif%}
